@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu IMC</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="title">
+            Calculadora - IMC
+        </header>
+
+        <div class="inputs">
+            <ul>
+                <li>
+                    <p>Nome:</p> <input class="i" id="name" type="text" placeholder="nome">
+                </li>
+                <li>
+                    <p>Altura:</p> <input class="i" id="alt" type="number" placeholder="em metros">
+                </li>
+                <li>
+                    <p>Peso:</p> <input class="i" id="peso" type="number" placeholder="em Kg">
+                </li>
+
+
+            </ul>
+
+            <input class="btn" id="calcular" type="button" value="Calcular">
+            <input class="btn" id="limpar" type="button" value="Limpar">
+
+
+        </div>
+        
+        <div id="display" style="opacity: 0; transition: opacity .3s ease-out"></div>
+
+        <script src="./script.js"></script>
+
+
+    </div>
+
+
+</body>
+
+</html>
