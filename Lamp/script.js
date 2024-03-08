@@ -3,58 +3,29 @@ var lamp = document.getElementById("lampimg");
 var btnon = document.getElementById("on");
 var btnoff = document.getElementById("off");
 var btchange = document.getElementById("changeLamp");
-let broke = false;
-
-console.log(broke);
 
 
-if (broke == false) {
-
-    btnon.addEventListener(
-        'click',
-        () => {
-            lamp.src = ("./images/ligada.jpg");
-        }
-    )
-
-    btnoff.addEventListener(
-        'click',
-        () => {
-            lamp.src = ("./images/desligada.jpg");
-        }
-    )
+function on() {
+    lamp.src = ("./images/ligada.jpg");
 }
 
-else {
-    btnon.addEventListener(
-        'click',
-        () => {
-            lamp.src = ("./images/quebrada.jpg");
-        }
-    )
-
-    btnoff.addEventListener(
-        'click',
-        () => {
-            lamp.src = ("./images/quebrada.jpg");
-        }
-    )
-
+function off() {
+    lamp.src = ("./images/desligada.jpg");
 }
 
 lamp.addEventListener(
     'click',
     () => {
         lamp.src = ("./images/quebrada.jpg");
-        broke = true;
-        console.log(broke);
+        btnon.removeAttribute('onclick');
+        btnoff.removeAttribute('onclick');
     })
 
 btchange.addEventListener(
     'click',
     () => {
         lamp.src = ("./images/desligada.jpg");
-        broke = false;
+        btnon.setAttribute("onclick", "on()");
+        btnoff.setAttribute("onclick", "off()");
     }
-
 )
