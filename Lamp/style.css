@@ -28,8 +28,18 @@ body {
 
 #lamp {
     margin: 10px 0 10px 0;
+    cursor: grab;
 }
 
 .btn {
     width: 50px;
+    cursor: pointer;
+}
+
+#changeLamp {
+    display: inline-block;
+    background-color: rgba(42, 165, 77, 0.765);
+    padding: 5px;
+    margin: 5px;
+    
 }
