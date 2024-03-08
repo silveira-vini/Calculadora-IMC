@@ -1,9 +1,7 @@
-var boxlamp = document.getElementById("lamp");
 var lamp = document.getElementById("lampimg");
 var btnon = document.getElementById("on");
 var btnoff = document.getElementById("off");
 var btchange = document.getElementById("changeLamp");
-
 
 function on() {
     lamp.src = ("./images/ligada.jpg");
