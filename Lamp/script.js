@@ -5,10 +5,15 @@ var btchange = document.getElementById("changeLamp");
 
 function on() {
     lamp.src = "./images/ligada.jpg";
+    btnon.setAttribute("style","display:none");
+    btnoff.setAttribute("style","display:inline-block");
 }
 
 function off() {
     lamp.src = "./images/desligada.jpg";
+    btnon.setAttribute("style","display:inline-block");
+    btnoff.setAttribute("style","display:none");
+
 }
 
 function broke() {
@@ -21,6 +26,8 @@ function replace() {
     lamp.src = "./images/desligada.jpg";
     btnon.setAttribute("onclick", "on()");
     btnoff.setAttribute("onclick", "off()");
+    btnon.setAttribute("style","display:inline-block");
+    btnoff.setAttribute("style","display:none");
 }
 
 lamp.addEventListener('click', broke);

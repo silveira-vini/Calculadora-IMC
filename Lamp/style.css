@@ -36,6 +36,14 @@ body {
     cursor: pointer;
 }
 
+#on {
+    display: inline-block;
+}
+
+#off {
+    display: none;
+}
+
 #changeLamp {
     display: inline-block;
     font-family: "Electrolize", sans-serif;
