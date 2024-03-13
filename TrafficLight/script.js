@@ -27,6 +27,7 @@ function changeImg() {
 
     image.setAttribute("src", images[indiceAtual]);
     indiceAtual = (indiceAtual + 1) % 3;
+    setTimeout ()
     
 }
 
