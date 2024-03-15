@@ -27,12 +27,12 @@ function changeImg() {
 
     image.setAttribute("src", images[indiceAtual]);
     indiceAtual = (indiceAtual + 1) % 3;
-    setTimeout ()
-    
+    setInterval(changeImg, 3000);
 }
+
 
 
 red.addEventListener("click", turnRed);
 yellow.addEventListener("click", turnYellow);
 green.addEventListener("click", turnGreen);
-automatic.addEventListener("click", interval);
+automatic.addEventListener("click", changeImg);
