@@ -1,38 +1,26 @@
+const img = document.getElementById('img');
+const buttons = document.getElementById('buttons');
 
-let image = document.getElementById("img")
-let red = document.getElementById("r");
-let yellow = document.getElementById("y");
-let green = document.getElementById("g");
-let automatic = document.getElementById("a");
+const trafficLight = (event) => {
 
-const images = ["./images/vermelho.png", "./images/amarelo.png", "./images/verde.png"]
-let indiceAtual = 0;
+    if (event.target.id == 'red') {
+        turnOn['red']();
+    }
 
+    if (event.target.id == 'yellow') {
+        turnOn['yellow']();
+    }
 
+    if (event.target.id == 'green') {
+        turnOn['green']();
+    }
 
-function turnRed() {
-    image.src = "./images/vermelho.png";
+};
+
+const turnOn = {
+    'red': () => img.src = './images/vermelho.png',
+    'yellow': () => img.src = './images/amarelo.png',
+    'green': () => img.src = './images/verde.png'
 }
 
-function turnYellow() {
-    image.src = "./images/amarelo.png";
-}
-
-function turnGreen() {
-    image.src = "./images/verde.png";
-}
-
-
-function changeImg() {
-
-    image.setAttribute("src", images[indiceAtual]);
-    indiceAtual = (indiceAtual + 1) % 3;
-    setInterval(changeImg, 3000);
-}
-
-
-
-red.addEventListener("click", turnRed);
-yellow.addEventListener("click", turnYellow);
-green.addEventListener("click", turnGreen);
-automatic.addEventListener("click", changeImg);
+buttons.addEventListener('click', trafficLight);
