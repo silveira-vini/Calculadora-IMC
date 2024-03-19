@@ -2,8 +2,8 @@
 
 let board = ["", "", "", "", "", "", "", "", ""];
 let playerTime = 0;
-let symbols = ["o", "x"];
 let gameOver = false;
+let symbols = ["o", "x"];
 let winStates = [
     [0, 1, 2],
     [3, 4, 5],
@@ -12,8 +12,8 @@ let winStates = [
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
-]
+    [2, 4, 6],];
+
 
 function handleMove(position) {
 
@@ -30,6 +30,7 @@ function handleMove(position) {
 
         if (gameOver == false) {
 
+            // if ternário -----------------
             playerTime = (playerTime == 0) ? 1 : 0;
         }
     }
